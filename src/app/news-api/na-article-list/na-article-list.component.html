@@ -4,12 +4,12 @@ World News
 
 <div class="list-group">
     <a *ngFor="let article of articles"
-        class="list-group-teim list-group-item-action"
+        class="list-group-item list-group-item-action"
         [href] = "article.url"
-        terget="_blank"
+        target="_blank"
     >
 
-        {{article.title}}
+        {{article.title | trimOutletName }}
 
     </a>
 </div>
