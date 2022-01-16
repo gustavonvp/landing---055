@@ -16,6 +16,8 @@ export class NaArticleListComponent implements OnInit {
     this.newsApiService.pagesOutput.subscribe((articles) => {
       this.articles = articles;
     })
+
+    this.newsApiService.getPage(1)
   }
 
   ngOnInit() {
