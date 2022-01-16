@@ -10,11 +10,11 @@ import { Article, NewsApiService } from '../news-api.service';
   styleUrls: ['./na-article-list.component.css']
 })
 export class NaArticleListComponent implements OnInit {
-  article: Article[];
+  articles: Article[];
 
   constructor(private newsApiService: NewsApiService) { 
-    this.newsApiService.pagesOutput.subscribe((article) => {
-      this.article = article;
+    this.newsApiService.pagesOutput.subscribe((articles) => {
+      this.articles = articles;
     })
   }
 
